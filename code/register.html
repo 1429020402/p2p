@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/reset.css">
+    <link rel="stylesheet" href="./dist/css/register.min.css">
+</head>
+<body>
+    <div class="top">
+        <ul class="container">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+            </li>
+            <li>
+                <a href="#">快速注册</a>
+            </li>
+            <li>
+                <a href="#">帮助</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="nav">
+        <div class="container">
+            <span><img src="./images/logo.png" alt=""></span>
+            <h3>用户注册</h3>
+        </div>
+
+    </nav>
+
+    <!-- 用户注册 -->
+    <div class="register ">
+        <div class="container">
+            <h3>用户注册</h3>
+            <div id="myform">
+                <p>请填写注册信息，点击“提交注册”即可完成注册！</p>
+                <div>
+                    <label>用户名&emsp;</label>
+                    <div>
+                        <input type="text" name="username" id="user"><span></span>
+                        <div id="hint"></div>
+                        <p>用户名为2~16位字母，数字，符号或中文</p>
+                    </div>
+                </div>
+                <div>
+                    <label>密码&emsp;&emsp;</label>
+                    <div>
+                        <input type="password"  name="pwd" id="pwd"><span></span>
+                        <p>密码为6~16位字符组成,采用数字、字母、符号安全性更高</p>
+                    </div>
+                </div>
+                <div>
+                    <label>确认密码</label>
+                    <div>
+                        <input type="password"  name="surepwd" id="surepwd"><span></span>
+                        <p>请再次输入密码</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div>
+                        <button type="button" id="Button">同意协议并注册</button>
+                        
+                        <a href="#" id="enter">已有账号，马上登录</a>
+                    </div>
+
+                    <a href="#">《使用协议说明书》</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="container row">
+            <div class="col-md-8 one">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有：&emsp; 2006-2015成都源代码教育咨询有限公司</p>
+                <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                <p>电  话： 028-86261949 / 400-808-6840 
+                    邮箱： yuandaima@itsource.cn</p>
+                <p><a href="#">蜀ICP备14030149号-1</a><a href="#">蜀公网安备510114990541</a></p>
+            </div>
+            <div class="col-md-2 two">
+                <p>官方微博:</p>
+                <a href="#" class="tx">
+                    <img src="./images/tecent.png" alt="">
+                </a>
+                <a href="#" class="xl"><img src="./images/sina.png" alt=""></a>
+            </div>
+            <div class="col-md-2  three">
+                <p>官方微信:</p>
+                <a href="#"><img src="./images/wx.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/popper/popper.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./dist/js/register.min.js"></script>
+    <!-- <script src="./js/jquery.validate.min.js"></script> -->
+</body>
+
+</html>

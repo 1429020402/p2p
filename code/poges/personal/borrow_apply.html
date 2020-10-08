@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="../../dist/css/borrow_apply.min.css">
+<div class="borrow_apply">
+    <div class="C_title">
+        <h3>信用贷款</h3>
+        <p>
+            <span class="text-info">授信额度:</span>
+            <span class="text-danger">2000</span>
+            <span class="text-info">可借金额:</span><span class="text-danger">2000</span>
+        </p>
+    </div>
+    <div class="content">
+        <div class="C_top">
+            借贷信息
+            <span id="borrow-info">
+                
+            </span>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4 text-right">借款金额</label>
+            <p class="col-md-8">
+                <input type="number" id="borrowmoney">元
+                <span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">借款利息</label>
+            <p class="col-md-8">
+                <input type="number" id="interest">%
+                <span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">借款期限</label>
+            <p class="col-md-8">
+                <select id="borrowtime">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>月 <span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">还款方式</label>
+            <p class="col-md-8 row">
+                <label class="col-md-3">
+                    <input type="radio" name="repaytype" checked value="0" style="width: 20px;">按月分期
+                </label>
+                <label class="col-md-3">
+                    <input type="radio" name="repaytype" value="1" style="width: 20px;">按月到期
+                </label>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">最小投标</label>
+            <p class="col-md-8">
+                <input type="number" id="minbid">元<span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">投标奖金</label>
+            <p class="col-md-8">
+                <input type="number" id="bouns">%<span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">招标天数</label>
+            <p class="col-md-8">
+                <select id="days">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>天<span></span>
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right ">借款标题</label>
+            <p class="col-md-8">
+                <input type="text" id="title" style="width:80%">
+            </p>
+        </div>
+        <div class="row">
+            <label class="col-md-4 text-right">借款描述</label>
+            <p class="col-md-8">
+                <textarea id="info" cols="40" rows="2" style="width:80%"></textarea>
+            </p>
+        </div>
+        <div class="row">
+            <p class="col-md-12">
+                <button type="button" class="btn btn-primary btn-sm" id="refer_approve">提交认证</button>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="../../dist/js/borrow_apply.min.js"></script>

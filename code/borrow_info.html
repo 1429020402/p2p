@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./dist/css/reset.css">
+    <link rel="stylesheet" href="./dist/css/borrow_info.min.css">
+</head>
+
+<body>
+    <!-- top -->
+    <div class="top">
+
+        <ul class="container">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li id="is_enter">
+                        
+            </li>
+            <li>
+                <a href="#">快速充值</a>
+            </li>
+            
+            <li>
+                <a href="#">账户充值</a>
+            </li>
+            <li id="is_register">
+                        
+            </li>
+            <li>
+                <a href="#">帮助</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- nav -->
+    <nav class="nav">
+        <div class="container">
+            <span><img src="./images/logo.png" alt=""></span>
+            <ul>
+                <li><a href="/#home">首页</a></li>
+                <li><a href="/#invest">我要投资</a></li>
+                <li><a href="/#borrow">我要借款</a></li>
+                <li class="active"><a href="/#personal">个人中心</a></li>
+                <li><a href="#">新手指引</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- main -->
+    <div class="main">
+        <div class="container">
+            <div class="row Header">
+                <div class="col-md-3">
+                    <div class="IN">
+                        <h3>借款人</h3>
+                        <div class="Body">
+                            <img src="./images/head_icon.jpg" alt="">
+                            <p><a href="#" id="userid"></a></p>
+                            <div>籍贯： 四川 - 成都</div>
+                            <div>专职客服: <a href="#">码妹妹</a></div>
+                            <div>认证信息：<span>
+                                    <svg t="1594439910535" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="4808" width="16" height="16">
+                                        <path
+                                            d="M923.6 857.4c0.1-2.1 0.6-4 0.6-6.1 0-30.8-13.1-58.6-33.8-78.4-35.8-51.9-110-115.3-263.6-157.1 0-1.2 0.4-2.3 0.4-3.5V501.2c57.3-43 95-115.5 95-197.7 0-131.9-96.9-238.8-216.3-238.8-119.5 0-216.3 106.9-216.3 238.8 0 86 41.3 161.2 103.1 203.2v105.5c0 1.4 0.4 2.7 0.4 4.1-57.8 20.7-183.7 72.3-251.3 150-22.4 17.8-37.9 43.8-41.1 73.6-1.4 5.5-1.2 10.4-0.2 15.2 2.1 58.1 49.9 105.1 108.5 105.1h606.5c56.6 0 103-44 107.9-99.3 0.1 0 0.5-0.1 0.5-0.1s-0.1-1.2-0.3-3.4z"
+                                            fill="#ffffff" p-id="4809"></path>
+                                        <path d="M568.9 692.6l-57-77-57 77H508L454.9 910h114l-53.1-217.4z"
+                                            fill="#ffffff" p-id="4810"></path>
+                                    </svg>
+                                </span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3><a class="userid"></a>借款 <span>信</span></h3>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td class="text-secondary" width="20%" >借款金额</td>
+                            <td class="text-info " id="borrowmoney"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary" >年化利率</td>
+                            <td class="text-info" id="interest"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">借款期限</td>
+                            <td class="text-info" id="borrowtime"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">投标奖励</td>
+                            <td class="text-info" id="bouns"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">还款方式</td>
+                            <td class="text-info" id="repaytype"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary" >最小投标</td>
+                            <td class="text-info" id="minbid"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">招标天数</td>
+                            <td class="text-info" id="days"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-3 last_child">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td class="text-secondary" width="40%">投标总数</td>
+                            <td class="text-info">2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">还需金额</td>
+                            <td class="text-info" id="need_money"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-secondary">投标进度</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-secondary">
+                                <div class="progress" id="progress_bar">
+                                    <!-- <div class="progress-bar progress-bar-info progress-bar-striped"
+                                        style="width: 100.00%"></div> -->
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>我要投资</h3>
+                    <div class="invest">
+                        <input type="number" placeholder="投资金额" id="chargemoney">
+                        <button type="button" class="btn btn-success btn-sm" id="invest_btn">提交</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table_s">
+                <div class="heading">
+                    借款人信息
+                </div>
+                <div class="body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>注册时间</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    2015-03-30
+                                </td>
+                                <td class="text-right">借款额度</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    2000
+                                </td>
+                                <td class="text-right">性别</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    男
+                                </td>
+                                <td class="text-right">年龄</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    25
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">文化程度</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    硕士研究生
+                                </td>
+                                <td class="text-right">每月收入</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    3000-4999
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table_s">
+                <div class="heading">
+                    审核认证信息
+                </div>
+                <div class="body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>认证时态度</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    优
+                                </td>
+                                <td class="text-right">信贷知识掌握情况</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    优
+                                </td>
+                                <td class="text-right">借款感言</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    给我2000度过难关
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">审核员认证意见</td>
+                                <td class="text-info" style="padding-left: 10px;;" width="20%">
+                                    啊啊啊啊啊啊
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table_s1">
+                <div class="heading">
+                    材料信息
+                </div>
+                <div class="body">
+                    <table class="table table-striped ">
+                        <thead class="table-borderless">
+                            <tr>
+                                <th scope="col">材料类型</th>
+                                <th scope="col">材料数量</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">本人身份证</th>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table_s1">
+                <div class="heading">
+                    还款情况
+                </div>
+                <div class="body">
+                    <table class="table table-striped ">
+                        <thead class="table-borderless">
+                            <tr>
+                                <th scope="col">还款状态</th>
+                                <th scope="col">最近一周</th>
+                                <th scope="col">最近一月</th>
+                                <th scope="col">最近六月</th>
+                                <th scope="col">六个月前</th>
+                                <th scope="col">总计[?]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>提前还款</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>准时还款</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期已还</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期未还</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table_s1">
+                <div class="heading">
+                    投标记录
+                </div>
+                <div class="body">
+                    <table class="table table-striped ">
+                        <thead class="table-borderless">
+                            <tr>
+                                <th scope="col">投标人</th>
+                                <th scope="col">年利率</th>
+                                <th scope="col">有效金额(¥)</th>
+                                <th scope="col">投标时间</th>
+                                <th scope="col">类型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>si*******</td>
+                                <td>10%</td>
+                                <td>1000.00</td>
+                                <td>2016-05-11 06:42:11</td>
+                                <td>手动投标</td>
+                            </tr>
+                            <tr>
+                                <td>xia*******</td>
+                                <td>10%</td>
+                                <td>1000.00</td>
+                                <td>2016-05-12 13:44:01</td>
+                                <td>手动投标</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="container row">
+            <div class="col-md-8 one">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有：&emsp; 2006-2015成都源代码教育咨询有限公司</p>
+                <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                <p>电  话： 028-86261949 / 400-808-6840 
+                    邮箱： yuandaima@itsource.cn</p>
+                <p><a href="#">蜀ICP备14030149号-1</a><a href="#">蜀公网安备510114990541</a></p>
+            </div>
+            <div class="col-md-2 two">
+                <p>官方微博:</p>
+                <a href="#" class="tx">
+                    <img src="./images/tecent.png" alt="">
+                </a>
+                <a href="#" class="xl"><img src="./images/sina.png" alt=""></a>
+            </div>
+            <div class="col-md-2  three">
+                <p>官方微信:</p>
+                <a href="#"><img src="./images/wx.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/popper/popper.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./dist/js/borrow_info.min.js"></script>
+</body>
+
+</html>
